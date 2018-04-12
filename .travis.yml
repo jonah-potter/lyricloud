@@ -14,7 +14,9 @@ addons:
 
 env:
   - DJANGO=2.0.4
-
+  global:
+  - PGPORT=5433
+  
 before_install:
   - export DJANGO_SETTINGS_MODULE=lyricloud/settings.py
   - export PYTHONPATH=$HOME/builds/jonah-potter/lyricloud
