@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'lyricloud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lyricloud',                      
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'lyricloud',
+        'USER': 'lyricloud',
+        'PASSWORD': 'lyricloud',
+        'HOST': '',
+        'PORT': 'db_port_number',
     }
 }
 
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Detroit'
 
 USE_I18N = True
 
