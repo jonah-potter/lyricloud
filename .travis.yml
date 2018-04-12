@@ -21,4 +21,7 @@ before_script:
   - psql -c "CREATE DATABASE lyricloud;" -U postgres
 
 script:
-  - python manage.py syncdb --noinput
+  - python manage.py migrate
+
+notifications:
+  slack: eureka-house:2nhj72jN7vB07HpBZmU0s396
