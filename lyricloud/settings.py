@@ -79,8 +79,8 @@ DATABASES = {
         'NAME': 'lyricloud',
         'USER': 'lyricloud',
         'PASSWORD': 'lyricloud',
-        'HOST': '',
-        'PORT': 'db_port_number',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
