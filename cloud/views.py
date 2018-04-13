@@ -1,8 +1,13 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
+from . import models
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the cloud index.")
+    s = Song(title='Find Your Cloud', credit='Papadosio')
+    s.save()
+    w = Word(text='dream')
+    w.save()
+    s.words.add(w)
+    response = s.title+" by "+s.credit+" contains word(s): "+w.text+"("+w.occurances+")"
+    return HttpResponse(response)
