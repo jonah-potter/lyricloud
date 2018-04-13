@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'lyricloud.apps.lyricloudConfig'
+    'cloud.apps.CloudConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

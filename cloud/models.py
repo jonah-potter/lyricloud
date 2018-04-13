@@ -7,4 +7,4 @@ class Song(models.Model):
 class Word(models.Model):
     text = models.CharField(max_length=50)
     occurances = models.IntegerField()
-    songs = models.ManyToManyField(Word)
+    songs = models.ManyToManyField(Song)

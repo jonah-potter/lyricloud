@@ -4,10 +4,13 @@ from . import models
 
 
 def index(request):
-    s = Song(title='Find Your Cloud', credit='Papadosio')
+    return HttpResponse("Hello, World!")
+
+def song(request):
+    s = models.Song(title='Find Your Cloud', credit='Papadosio')
     s.save()
-    w = Word(text='dream')
+    w = models.Word(text='dream', occurances=1)
     w.save()
-    s.words.add(w)
-    response = s.title+" by "+s.credit+" contains word(s): "+w.text+"("+w.occurances+")"
+    w.songs.add(s)
+    response = s.title+" by "+s.credit+" contains the word(s) \""+w.text+"\" "+str(w.occurances)+" time(s)."
     return HttpResponse(response)
