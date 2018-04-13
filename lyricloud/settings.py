@@ -81,7 +81,7 @@ DATABASES = {
       'HOST': 'localhost',
       'PORT': '5432',
       'USER': 'lyricloud',
-      'PASSWORD': '303Eats4$$'
+      'PASSWORD': '303eats4$$'
   }
 }
 
