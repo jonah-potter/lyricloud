@@ -9,8 +9,8 @@ def index(request):
 def song(request):
     s = models.Song(title='Find Your Cloud', credit='Papadosio')
     s.save()
-    w = models.Word(text='dream', occurances=1)
+    w = models.Word(text='dream')
     w.save()
-    w.songs.add(s)
-    response = s.title+" by "+s.credit+" contains the word(s) \""+w.text+"\" "+str(w.occurances)+" time(s)."
+    sw = models.SongWord.objects.create(song=s, word=w, count=1)
+    response = s.title+" by "+s.credit+" contains the word(s) \""+w.text+"\" "+str(sw.count)+" time(s)."
     return HttpResponse(response)
